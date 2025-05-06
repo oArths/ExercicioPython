@@ -75,8 +75,51 @@ def salMes():
 
 def celFa():
     f = float(input("Digite a temperatura em °F: "))
-
     c = f /32
     print("A temperatura m °C é: ", c)
+def faCel():
+    c = int(input("Digite a temperatura em °C: "))
+    f = c * 32
+    print("A temperatura m °F é: ", f)
 
-celFa()
+def dados():
+    num1 = int(input("Digite o 1° numero inteiro: ")) 
+    num2 = int(input("Digite o 2° numero inteiro: ")) 
+    num3 = float(input("Digite o 1° numero real: "))
+
+    a = (num1 * 2) + (num2 /2)
+    b = (num1 * 3) + num3 
+    c = math.pow(num3, 3)
+    print("o produto do dobro do primeiro com metade do segundo:", a) 
+    print("a soma do triplo do primeiro com o terceiro:", b) 
+    print("o terceiro elevado ao cubo:", c) 
+def peixe():
+    peso = float(input("Digite o peso: "))
+    execeso = peso - 50
+    multa = execeso * 4
+    print("quantidade de quilos além do limite: ", execeso)
+    print("valor da multa R$: ", multa)
+
+def imposto():
+    valor = float(input("Quanto você ganha por hora?: "))
+    mes = int(input("Quantas horas você trabalha nesse mês?: "))
+    bruto = valor * mes
+    impostoRend = bruto * 0.11
+    inss = bruto * 0.08
+    sindicato = bruto * 0.05
+
+    total_descontos = impostoRend + inss + sindicato
+    liquido = bruto - total_descontos
+    print("Bruto R$", bruto)
+    print("Imposto de Renda R$", impostoRend)
+    print("INSS R$", inss)
+    print("Sindicato R$", sindicato)
+    print("Liquido R$", liquido)
+
+def tintas():
+    metros = int(input("Digite em metros quadrados da area a pintar: "))
+    necessario = metros * 3
+    latas =  math.ceil(necessario / 18)
+    valor = latas * 80
+    print("total de latas: ",latas)
+    print("valor total: ",valor)
